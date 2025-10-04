@@ -1,0 +1,26 @@
+# Ignore all local Terraform directories in subfolders
+**/.terraform/*
+
+# Ignore all state files anywhere
+**/*.tfstate
+**/*.tfstate.*
+
+# Ignore lock files (optional)
+**/.terraform.lock.hcl
+
+# Ignore crash logs
+**/crash.log
+
+# Ignore sensitive and local variable files
+**/*.tfvars
+**/*.tfvars.json
+
+# Ignore backup files
+**/*.backup
+
+# Ignore private key files
+**/*.pem
+**/*.key
+**/*.ppk
+**/testkey
+**/dovekey
