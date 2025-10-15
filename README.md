@@ -75,6 +75,57 @@ The goal of this repository is to help recruiters, hiring managers, and technica
 - Simplifies complex setup using modular IaC.
 - **Focus:** Reusability, parameterization, and scalability.
 
+### 9️⃣ Terraform EKS Setup — Managed Kubernetes Cluster (Amazon EKS)
+
+This lab automates the creation of a **managed Kubernetes cluster (EKS)** on AWS using Terraform modules for both the **VPC** and the **EKS cluster**.  
+It combines concepts from previous labs — Terraform modules, AWS networking, and Kubernetes infrastructure automation — to deploy a **production-grade cluster**.
+
+---
+
+### 🧩 Highlights
+
+- Uses `terraform-aws-modules/vpc` and `terraform-aws-modules/eks`
+- Creates **3 public + 3 private subnets**, Internet Gateway, and NAT Gateway
+- Provisions **EKS control plane** and **two managed node groups (t3.small)**
+- Configures **remote state storage** in an **S3 backend**
+- Generates **kubeconfig** for `kubectl` access
+- Demonstrates **cost optimization** and cleanup with `terraform destroy`
+
+---
+
+### 📁 Key Files
+
+| **File** | **Purpose** |
+|-----------|--------------|
+| `terraform.tf` | Defines providers, versions, and S3 backend configuration |
+| `variables.tf` | Defines cluster name, region, and input variables |
+| `vpc.tf` | Declares the VPC module with subnets, routes, and tags |
+| `eks-cluster.tf` | Declares the EKS module and managed node groups |
+| `outputs.tf` | Displays cluster endpoint and node information |
+| `main.tf` | Orchestrates providers and resource dependencies |
+
+---
+
+### ⚙️ Commands
+
+```bash
+terraform init
+terraform plan
+terraform apply
+aws eks update-kubeconfig --name <cluster-name> --region us-east-1
+kubectl get nodes
+terraform destroy   # Cleanup to avoid billing
+```
+
+---
+
+### 🧠 Focus
+
+- **Managed Kubernetes deployment** via Terraform modules
+- **Multi-resource orchestration** (VPC → EKS → Nodes)
+- **Remote state management** with S3
+- **Kubernetes provider integration**
+- **Practical DevOps cost control** and cleanup automation
 ---
 
 ## 🧰 Tools & Technologies
