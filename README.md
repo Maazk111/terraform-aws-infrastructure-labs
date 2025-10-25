@@ -2,13 +2,14 @@
 
 ## 📘 Overview
 This repository demonstrates my **Terraform proficiency** through a series of structured, hands-on exercises.  
-It showcases how I **design, provision, and manage AWS infrastructure** as code (IaC) using Terraform best practices — from foundational concepts to modular VPC automation.
+It showcases how I **design, provision, and manage AWS infrastructure** as code (IaC) using Terraform best practices — from foundational concepts to **advanced modular automation including Amazon EKS (Elastic Kubernetes Service)**.
 
 The goal of this repository is to help recruiters, hiring managers, and technical reviewers quickly assess:
 
 - 💡 Understanding of Terraform fundamentals & architecture
 - ⚙️ Ability to apply **real-world DevOps practices** (variables, remote state, outputs, provisioning)
 - ☁️ Experience working with **AWS resources** in an automated, consistent, and reusable way
+- 🚀 Capability to **deploy and manage containerized workloads** using **Amazon EKS** via Terraform
 
 ---
 
@@ -216,17 +217,17 @@ terraform destroy
 
 ## 🏆 Summary Table
 
-| Exercise | Focus Area     | Key Concepts                |
-|-----------|----------------|-----------------------------|
-| 1         | Introduction   | IaC, providers, state       |
-| 2         | Basics         | Data sources, AMI fetching  |
-| 3         | Structure      | Modular files, state        |
-| 4         | Provisioners   | Automation via SSH          |
-| 5         | Outputs        | IP outputs, local-exec      |
-| 6         | Backends       | S3 remote backend           |
-| 7         | VPC Manual     | AWS networking              |
-| 8         | VPC Module     | Modular, scalable infra     |
+| Exercise | Focus Area     | Key Concepts                         |
+|-----------|----------------|--------------------------------------|
+| 1         | Introduction   | IaC, providers, state                |
+| 2         | Basics         | Data sources, AMI fetching           |
+| 3         | Structure      | Modular files, state                 |
+| 4         | Provisioners   | Automation via SSH                   |
+| 5         | Outputs        | IP outputs, local-exec               |
+| 6         | Backends       | S3 remote backend                    |
+| 7         | VPC Manual     | AWS networking                       |
+| 8         | VPC Module     | Modular, scalable infra              |
+| 9         | EKS Cluster    | Managed Kubernetes, modules, scaling |
 
 > *"Infrastructure as Code isn’t just automation — it’s reproducibility, reliability, and professionalism."* 🌱
-
 
